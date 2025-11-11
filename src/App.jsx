@@ -23,7 +23,7 @@ import { CheckCircle2, Circle, Trash2, Plus } from 'lucide-react'
 export default function App() {
   // Local UI state
   const [tasks, setTasks] = useState(() => {
-    // Load tasks from localStorage on app start
+    // Load tasks from localStorage or set default task
     const savedTasks = localStorage.getItem('tasks');
     return savedTasks ? JSON.parse(savedTasks) : [
       { id: 1, text: 'Learn React basics', completed: false }
@@ -109,7 +109,7 @@ export default function App() {
         {/* Add Task Section */}
         <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-3xl p-8 mb-8 shadow-lg">
           <h2 className="text-2xl font-bold text-white mb-6">Add New Task</h2>
-          <div className="flex gap-4">
+          <div className="flex flex-col sm:flex-row gap-4">
             <input
               type="text"
               aria-label="New task"

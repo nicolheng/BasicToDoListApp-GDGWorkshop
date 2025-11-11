@@ -27,8 +27,12 @@ body {
   box-sizing: border-box;
 }
 
-/* Fix overflow for Add button on mobile */
+/* Ensure Add button scales properly on mobile */
 button {
   max-width: 100%;
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   box-sizing: border-box;
 }
