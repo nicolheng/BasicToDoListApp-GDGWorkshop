@@ -28,10 +28,9 @@ export default function App() {
   // Local UI state
   const [tasks, setTasks] = useState(() => {
     // Load tasks from localStorage or set default task
-    const savedTasks = localStorage.getItem('tasks');
-    return savedTasks ? JSON.parse(savedTasks) : [
-      { id: 1, text: 'Learn React basics', completed: false }
-    ];
+    const saved = localStorage.getItem("tasks");
+    if (saved) return JSON.parse(saved);
+    return [];
   });
 
   const [inputValue, setInputValue] = useState('');
@@ -82,7 +81,7 @@ export default function App() {
 
         {/* Add Task Section */}
         <AddTask
-          addTask={addTask}
+          onAddTask={addTask}
           inputValue={inputValue}
           setInputValue={setInputValue}/>
 
