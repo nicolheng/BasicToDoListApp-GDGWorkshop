@@ -1,5 +1,0 @@
-- Extracted StatsCard, AddTask, TasksList, Header, Footer into components
-- Renamed confusing props (addTask → onAddTask)
-- Removed useCallback
-- Simplified localStorage logic for teaching
-- will consider removed stats during teaching flow (kept in final version)

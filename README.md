@@ -1,52 +1,16 @@
-# Basic ToDo List App — Workshop Base Project
+# React + Vite
 
-This folder contains the clean, simplified base code used for the React beginner workshop.
-It is not the final version of the app — it is the starting point from which all milestone branches (v1 → v6) will be built.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## What This Base Contains
+Currently, two official plugins are available:
 
-- A minimal React + Vite setup
-- Pre-organized folder structure
-- Basic UI components (Header, AddTask, TasksList, Footer)
-- Clean variable names and simple logic
-- No advanced hooks or patterns
-- Tailwind CSS included via CDN
-- Ready for students to add logic step-by-step
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Folder Structure
+## React Compiler
 
-```
-workshop-base/
-  src/
-    App.jsx
-    components/
-      Header.jsx
-      AddTask.jsx
-      TasksList.jsx
-      Footer.jsx
-  index.html
-  package.json
-  README.md  ← this file
-```
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Purpose of This Base
+## Expanding the ESLint configuration
 
-This version is designed to:
-
-- keep the code simple
-- focus on React fundamentals
-- reduce UI noise for beginners
-- serve as the foundation for workshop milestones
-- Students will not create a project from scratch.
-- They will start from this base and learn concepts in stages.
-
-## How to Run
-
-```
-npm install
-npm run dev
-```
-
-## Notes
-
-See `./notes-refactor.md` for details on how this base was cleaned, refactored, and simplified for teaching.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
