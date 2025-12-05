@@ -10,11 +10,23 @@ function App() {
   const [tasks, setTasks] = useState([]);
 
   function addTask() {
-      const text = inputValue.trim()
-      if (!text) return // ignore empty input
-      const newTask = text
-      setTasks(prev => [...prev, newTask])
-      setInputValue('')
+    const text = inputValue.trim()
+    if (!text) return // ignore empty input
+
+    const newTask = { 
+      id: Date.now(), 
+      text, 
+      completed: false 
+    }
+    setTasks(prev => [...prev, newTask])
+    setInputValue('')
+  }
+
+  // Toggle completion by id
+  function toggleTask(id) {
+    setTasks(prev => prev.map(task =>
+      task.id === id ? { ...task, completed: !task.completed } : task
+    ))
   }
 
   return (
@@ -26,7 +38,8 @@ function App() {
         inputValue={inputValue}
         setInputValue={setInputValue}/>
         <TasksList
-        tasks={tasks}/>
+        tasks={tasks}
+        toggleTask={toggleTask}/>
         <Footer/>
       </div>
     </div>
