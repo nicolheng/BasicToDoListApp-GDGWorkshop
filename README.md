@@ -1,8 +1,8 @@
-M3 – List Render
+M4 – Toggle Task
 
-This branch adds the logic for displaying tasks using .map().
+This branch adds the logic to toggle a task’s completed state.
 
-Participants learn how to take the tasks array from App.jsx, pass it into TasksList as props, render each task dynamically, and use a simple key for each item.
+Participants learn how to add a `completed` field to each task, create a `toggleTask(id)` function in `App.jsx`, pass the toggle function into `TasksList`, and update the UI based on whether a task is completed
 
-📘 Full tutorial:
-https://docs.google.com/document/d/1lC6jdb6_lTzUYTafTT3xD0zK7mRWm1qp1_5MgDdDFbs/edit?tab=t.b3nlt8a5vpf3
+📘 Full tutorial:  
+https://docs.google.com/document/d/1lC6jdb6_lTzUYTafTT3xD0zK7mRWm1qp1_5MgDdDFbs/edit?tab=t.ko9yen6by26y

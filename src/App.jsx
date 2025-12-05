@@ -25,9 +25,9 @@ function App() {
         onAddTask={addTask}
         inputValue={inputValue}
         setInputValue={setInputValue}/>
-        <TasksList/>
+        <TasksList
+        tasks={tasks}/>
         <Footer/>
-        <p>{tasks}</p>
       </div>
     </div>
   )
