@@ -1,6 +1,8 @@
-M2 – AddTask Logic
+M3 – List Render
 
-This branch adds the basic logic for creating tasks using useState and props.
-Participants learn how to control input, add tasks, and lift state into App.jsx.
+This branch adds the logic for displaying tasks using .map().
 
-📘 Full tutorial: https://docs.google.com/document/d/1lC6jdb6_lTzUYTafTT3xD0zK7mRWm1qp1_5MgDdDFbs/edit?tab=t.ft3r4o2k076i
+Participants learn how to take the tasks array from App.jsx, pass it into TasksList as props, render each task dynamically, and use a simple key for each item.
+
+📘 Full tutorial:
+https://docs.google.com/document/d/1lC6jdb6_lTzUYTafTT3xD0zK7mRWm1qp1_5MgDdDFbs/edit?tab=t.b3nlt8a5vpf3
