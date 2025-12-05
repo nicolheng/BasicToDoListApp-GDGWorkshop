@@ -29,6 +29,10 @@ function App() {
     ))
   }
 
+  function deleteTask(id) {
+    setTasks(prev => prev.filter(task => task.id !== id))
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-orange-100 p-8">
       <div className="max-w-4xl mx-auto">
@@ -39,7 +43,8 @@ function App() {
         setInputValue={setInputValue}/>
         <TasksList
         tasks={tasks}
-        toggleTask={toggleTask}/>
+        toggleTask={toggleTask}
+        deleteTask={deleteTask}/>
         <Footer/>
       </div>
     </div>

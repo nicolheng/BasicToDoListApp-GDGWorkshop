@@ -2,7 +2,7 @@
 import React from "react"
 import { CheckCircle2, Circle, Trash2} from 'lucide-react'
 
-export default function TasksList({tasks, toggleTask}){
+export default function TasksList({tasks, toggleTask, deleteTask}){
     return (
         <div className="bg-white rounded-3xl p-8 shadow-lg">
             <h2 className="text-2xl font-bold text-gray-800 mb-6">My Tasks</h2>
@@ -35,7 +35,8 @@ export default function TasksList({tasks, toggleTask}){
                     >
                         {task.text}
                     </span>
-                    <button
+                    <button 
+                        onClick={() => deleteTask(task.id)}
                         className="flex-shrink-0 text-red-400 hover:text-red-600 transition-colors p-2 hover:bg-red-50 rounded-xl"
                     >
                         <Trash2 size={18} />
